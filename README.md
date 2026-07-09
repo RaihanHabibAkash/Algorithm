@@ -1,1 +1,3 @@
-"# Algorithm" 
+# Algorithm
+
+1. Graph
