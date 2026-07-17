@@ -3,7 +3,7 @@ using namespace std;
 
 vector<int> adj_list[100];
 
-void adj_mat_to_adj_list_converter(int adj_mat[][100], int n) {
+void adj_matrix_to_adj_list_converter(int adj_mat[][100], int n) {
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n; j++)
             if(adj_mat[i][j] == 1)
@@ -18,7 +18,7 @@ int main() {
         for(int j = 0; j < n; j++)
             cin >> adj_mat[i][j];
     
-    adj_mat_to_adj_list_converter(adj_mat, n);
+    adj_matrix_to_adj_list_converter(adj_mat, n);
 
     for(int i = 0; i < n; i++) {
         cout << i << " -> ";
