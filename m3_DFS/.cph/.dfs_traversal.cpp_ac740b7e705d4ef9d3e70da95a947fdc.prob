@@ -1,0 +1,1 @@
+{"name":"Local: dfs_traversal","url":"f:\\Codes\\ForPithorons\\Algorithm\\m3_DFS\\dfs_traversal.cpp","tests":[{"id":1784277013664,"input":"7 7\n0 2\n2 4\n0 1\n1 5\n1 3\n0 3\n3 6","output":"0 2 4 1 5 3 6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m3_DFS\\dfs_traversal.cpp","group":"local","local":true}
