@@ -1,0 +1,1 @@
+{"name":"Local: number_of_components","url":"f:\\Codes\\ForPithorons\\Algorithm\\m3_2D_Grid\\number_of_components.cpp","tests":[{"id":1784562955192,"input":"8 6\n1 2\n0 5\n2 3\n6 7\n4 5\n1 3","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m3_2D_Grid\\number_of_components.cpp","group":"local","local":true}
