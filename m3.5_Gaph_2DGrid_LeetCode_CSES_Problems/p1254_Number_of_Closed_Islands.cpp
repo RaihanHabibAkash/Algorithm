@@ -63,11 +63,8 @@ public:
         for(int i = 0; i < 4; i++) {
             int ci = si + mv[i].first,
                 cj = sj + mv[i].second;
-            if(valid(ci, cj) && grid[ci][cj] == 0 && !visited[ci][cj]) {
-                if(ci == rows-1 || cj == cols-1 || ci == 0 || cj == 0)
-                    flag = true;
+            if(valid(ci, cj) && grid[ci][cj] == 0 && !visited[ci][cj])
                 dfs(grid, ci, cj);
-            }
         }
     }
     int closedIsland(vector<vector<int>>& grid) {
