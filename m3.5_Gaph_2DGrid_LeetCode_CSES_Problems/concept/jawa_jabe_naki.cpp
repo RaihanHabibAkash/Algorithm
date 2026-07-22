@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int rows, cols;
+char grid[100][100];
+bool visited[100][100];
+vector<pair<int,int>> mv = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+bool valid(int i, int j) {
+    if(i < 0 || i >= rows || j < 0 || j >= cols)
+        return false;
+    return true;
+}
+
+void dfs(int src_row, int src_col) {
+    visited[src_row][src_col] = true;
+
+    for(int i = 0; i < 4; i++) {
+        int child_row = src_row + mv[i].first,
+            child_col = src_col + mv[i].second;
+        
+        if(valid(child_row, child_col) && !visited[child_row][child_col] && grid[child_row][child_col] == '.')
+            dfs(child_row, child_col);
+    }
+}
+
+int main() {
+    cin >> rows >> cols;
+    for(int i = 0; i < rows; i++)
+        for(int j = 0; j < cols; j++)
+            cin >> grid[i][j];
+
+    memset(visited, false, sizeof(visited));
+
+    int src_row, src_col; cin >> src_row >> src_col;
+    dfs(src_row, src_col);
+    // (~) = Ocean, (.) = cities
+
+    int dst_row, dst_col; cin >> dst_row >> dst_col;
+    if(visited[dst_row][dst_col]) cout << "YES" << endl;
+    else cout << "NO" << endl;
+    
+
+    return 0;
+}
