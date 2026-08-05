@@ -54,7 +54,7 @@ public:
 
         for(int i = 0; i < isConnected.size(); i++)
             for(int j = 0; j < isConnected.size(); j++)
-                if(!vis[j] && isConnected[i][j] == 1 && i != j)
+                if(isConnected[i][j] == 1 && i != j)
                     adj_list[i].push_back(j);
         
         int cities = 0;
