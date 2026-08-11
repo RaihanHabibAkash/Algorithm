@@ -11,3 +11,5 @@
 5. LeetCode Problems
 
 6. Cycle detection in Graph
+
+7. Dijkstra (Naive, Optimized)
