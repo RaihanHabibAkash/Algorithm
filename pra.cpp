@@ -1,35 +1,49 @@
-class Solution {
-public:
-    vector<int> ans;
-    bool vis[10005];
-    bool pathVis[10005];
+#include <bits/stdc++.h>
+using namespace std;
 
-    bool dfs(vector<vector<int>>& graph, int src) {
-        vis[src] = true;
-        pathVis[src] = true;
+vector<pair<int,int>> adj_list[1005];
+int dis[1005];
 
-        for(int child : graph[src]) {
-            if(vis[child] && pathVis[child])
-                return false;
+void dijkstra(int src) {
+    queue<pair<int,int>> q;
+    dis[src] = 0;
+    q.push({src, 0});
 
-            if(!vis[child])
-                if(!dfs(graph, child))
-                    return false;
+    while(!q.empty()) {
+        int par_node = q.front().first,
+            par_dis = q.front().second;
+        q.pop();
+
+        for(pair<int,int> child : adj_list[par_node]) {
+            int child_node = child.first,
+                child_dis = child.second;
+            
+            if(par_dis + child_dis < dis[child_node]) {
+                dis[child_node] = par_dis + child_dis;
+                q.push({child_node, dis[child_node]});
+            }
         }
+    }
+}
 
-        ans.push_back(src);
-        pathVis[src] = false;
-        return true;
+int main() {
+    int nodes, edges; cin >> nodes >> edges;
+
+    while(edges--) {
+        int a, b, c; cin >> a >> b >> c;
+        adj_list[a].push_back({b,c});
+        adj_list[b].push_back({a,c});
     }
 
-    vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
-        memset(vis, false, sizeof(vis));
-        memset(pathVis, false, sizeof(pathVis));
+    for(int i = 0; i < nodes; i++)
+        dis[i] = INT_MAX;
 
-        for(int i = 0; i < graph.size(); i++)
-            if(!vis[i])
-                dfs(graph, i);
-        sort(ans.begin(), ans.end());
-        return ans;
-    }
-};
+    // Start point of Dijkstra
+    int src; cin >> src;
+    dijkstra(src);
+
+    for(int i = 0; i < nodes; i++)
+        cout << i << " -> " << dis[i] << endl;
+
+    return 0;
+}
