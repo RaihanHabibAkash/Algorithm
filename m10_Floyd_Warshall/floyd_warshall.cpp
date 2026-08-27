@@ -22,7 +22,8 @@ int main() {
     for(int k = 0; k < nodes; k++)
         for(int i = 0; i < nodes; i++)
             for(int j = 0; j < nodes; j++)
-                if(adjacency_matrix[i][k] != INT_MAX && adjacency_matrix[k][j] != INT_MAX && adjacency_matrix[i][k] + adjacency_matrix[k][j] < adjacency_matrix[i][j])
+                if(adjacency_matrix[i][k] != INT_MAX && adjacency_matrix[k][j] != INT_MAX && 
+                        adjacency_matrix[i][k] + adjacency_matrix[k][j] < adjacency_matrix[i][j])
                     adjacency_matrix[i][j] = adjacency_matrix[i][k] + adjacency_matrix[k][j];
     
     // Printing
