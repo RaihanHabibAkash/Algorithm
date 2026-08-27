@@ -36,10 +36,8 @@ class Solution {
 public:
     vector<int> nodes;
     vector<vector<int>> ans;
-    bool vis[20];
 
     void dfs(vector<vector<int>>& graph, int src, int n) {
-        vis[src] = true;
         nodes.push_back(src);
 
         for(int child : graph[src])
@@ -49,11 +47,9 @@ public:
             ans.push_back(nodes);
 
         nodes.pop_back();
-        vis[src] = false;
     }
 
     vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
-        memset(vis, false, sizeof(vis));
         dfs(graph, 0, graph.size()-1);
 
         return ans;
