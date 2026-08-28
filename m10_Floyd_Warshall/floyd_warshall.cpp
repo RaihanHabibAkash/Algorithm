@@ -16,7 +16,7 @@ int main() {
     while(edges--) {
         int a, b, c; cin >> a >> b >> c;
         adjacency_matrix[a][b] = c;
-        // dis[b][a] = c; (undirected)
+        // adjacency_matrix[b][a] = c; (undirected)
     }
 
     for(int k = 0; k < nodes; k++)
