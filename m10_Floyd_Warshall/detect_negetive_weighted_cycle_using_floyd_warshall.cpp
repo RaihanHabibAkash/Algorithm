@@ -3,32 +3,32 @@ using namespace std;
 
 int main() {
     int nodes, edges; cin >> nodes >> edges;
+    int adj_mat[nodes][nodes]; // adjacency matrix
 
-    int adjacency_matrix[nodes][nodes];
     for(int i = 0; i < nodes; i++)
         for(int j = 0; j < nodes; j++) {
-            if(i == j) 
-                adjacency_matrix[i][j] = 0;
+            if(i == j)
+                adj_mat[i][j] = 0;
             else 
-                adjacency_matrix[i][j] = INT_MAX;
+                adj_mat[i][j] = INT_MAX;
         }
-
+    
     while(edges--) {
         int a, b, c; cin >> a >> b >> c;
-        adjacency_matrix[a][b] = c;
-        // dis[b][a] = c; (undirected)
+        adj_mat[a][b] = c;
+        // adj_mat[b][a] = c; Undirected graph
     }
-
+    // checking (i --> k --> j) < (i --> j)
     for(int k = 0; k < nodes; k++)
         for(int i = 0; i < nodes; i++)
             for(int j = 0; j < nodes; j++)
-                if(adjacency_matrix[i][k] != INT_MAX && adjacency_matrix[k][j] != INT_MAX && 
-                        adjacency_matrix[i][k] + adjacency_matrix[k][j] < adjacency_matrix[i][j])
-                    adjacency_matrix[i][j] = adjacency_matrix[i][k] + adjacency_matrix[k][j];
+                if(adj_mat[i][k]!=INT_MAX && adj_mat[k][j]!=INT_MAX && adj_mat[i][k] + adj_mat[k][j] < adj_mat[i][j])
+                    adj_mat[i][j] = adj_mat[i][k] + adj_mat[k][j];
     
+    // If prime diagonal has - (val < 0) value means negetive weighted cycle (no ans)
     bool cycle = false;
-    for(int i = 0 ; i < nodes; i++)
-        if(adjacency_matrix[i][i] < 0)
+    for(int i = 0; i < nodes; i++)
+        if(adj_mat[i][i] < 0)
             cycle = true;
     
     if(cycle)
@@ -36,10 +36,10 @@ int main() {
     else {
         for(int i = 0; i < nodes; i++) {
             for(int j = 0; j < nodes; j++) {
-                if(adjacency_matrix[i][j] == INT_MAX)
+                if(adj_mat[i][j] == INT_MAX)
                     cout << "INF ";
                 else
-                    cout << adjacency_matrix[i][j] << " ";
+                    cout << adj_mat[i][j] << " ";
             }
             cout << endl;
         }
