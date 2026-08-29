@@ -39,11 +39,19 @@ All the pairs (ui, vi) are unique. (i.e., no multiple edges.)
 
 class Solution {
 public:
+
+class cmp {
+public:
+    bool operator()(pair<int,int> l, pair<int,int> r) {
+        return l.second > r.second;
+    }
+};
+
     int dis[105];
     vector<pair<int,int>> adj_list[105];
 
     void dijkstra(int src) {
-        priority_queue<pair<int,int>> pq;
+        priority_queue<pair<int,int>, vector<pair<int,int>>, cmp> pq;
         dis[src] = 0;
         pq.push({src, 0});
 
@@ -73,14 +81,14 @@ public:
             adj_list[times[i][0]].push_back({times[i][1], times[i][2]});
         
         dijkstra(k);
-
-        for(int i = 1; i <= n; i++)
-            if(dis[i] == INT_MAX) return -1;
         
         int val = -1;
-        for(int i = 1; i <= n; i++)
+        for(int i = 1; i <= n; i++) {
+            if(dis[i] == INT_MAX)
+                return -1;
             if(dis[i] > val)
                 val = dis[i];
+        }
 
         return val;
     }
