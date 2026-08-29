@@ -31,25 +31,29 @@ Constraints:
 class Solution {
   public:
     vector<int> bellmanFord(int V, vector<vector<int>>& edges, int src) {
-        const int mxDis = 100000000;
         vector<int> dis(V, mxDis);
         dis[src] = 0;
         
-        for(int i = 1; i <= V-1; i++)
-            for(vector<int> edge : edges)
-                if(dis[edge[0]] != mxDis && dis[edge[0]] + edge[2] < dis[edge[1]])
-                    dis[edge[1]] = dis[edge[0]] + edge[2];
-        
-        bool cycle = false;
-        for(vector<int> edge : edges)
-                if(dis[edge[0]] != mxDis && dis[edge[0]] + edge[2] < dis[edge[1]])
-                    cycle = true;
-        
-        if(cycle) {
-            vector<int> v = {-1};
-            return v;
+        for(int k = 1; k <= V-1; k++)
+            for(int i = 0; i < edges.size(); i++) {
+                int a = edges[i][0], // a ---cost--> b
+                    b = edges[i][1],
+                    cost = edges[i][2];
+
+                if(dis[a] != 1e8 && dis[a] + cost < dis[b])
+                    dis[b] = dis[a] + cost;
+            }
+            
+        // Cycle deted return direcly
+        for(int i = 0; i < edges.size(); i++) {
+                int a = edges[i][0], // a ---cost--> b
+                    b = edges[i][1],
+                    cost = edges[i][2];
+
+                if(dis[a] != 1e8 && dis[a] + cost < dis[b])
+                    return {-1};
         }
-        else
-            return dis;
+        
+        return dis;
     }
 };
