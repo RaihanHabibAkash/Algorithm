@@ -43,7 +43,7 @@ public:
         for(int child : graph[src])
             dfs(graph, child, n);
 
-        if(src == n && !nodes.empty())
+        if(src == n)
             ans.push_back(nodes);
 
         nodes.pop_back();
