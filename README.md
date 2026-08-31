@@ -13,3 +13,11 @@
 6. Cycle detection in Graph
 
 7. Dijkstra (Naive, Optimized)
+
+8. 2D Grid(Dfs, Bfs)
+
+9. Bellman Ford
+
+10. Floyd Warshall
+
+11. Disjoint Set Union (DSU)
