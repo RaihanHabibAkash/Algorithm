@@ -21,3 +21,7 @@
 10. Floyd Warshall
 
 11. Disjoint Set Union (DSU)
+
+12. Hacker Rank Problems
+
+13. Problem Solving (CSES, Codeforces)
