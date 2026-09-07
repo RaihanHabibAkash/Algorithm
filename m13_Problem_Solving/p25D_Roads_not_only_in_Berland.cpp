@@ -90,6 +90,8 @@ int main() {
     while(!dlt.empty() && i < nds.size()) {
         cout << dlt.front().first << " " << dlt.front().second << " ";
         dlt.pop();
+
+        dsu_union(nds[0], nds[i]);
         cout << nds[0] << " " << nds[i++] << endl;
     }
 
