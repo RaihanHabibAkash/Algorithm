@@ -24,4 +24,4 @@
 
 12. Hacker Rank Problems
 
-13. Problem Solving (CSES, Codeforces)
+13. Problem Solving (CSES, Codeforces, Outsbook)
