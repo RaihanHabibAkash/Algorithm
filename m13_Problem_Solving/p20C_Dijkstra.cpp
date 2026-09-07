@@ -41,34 +41,35 @@ OutputCopy
 */
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 class cmp {
 public:
-    bool operator()(pair<int, long long> l, pair<int,long long> r) {
+    bool operator()(pair<ll,ll> l, pair<ll,ll> r) {
         return l.second > r.second;
     }
 };
 
 int parrent[100000 + 100];
-long long dis[100000 + 100];
-vector<pair<int,long long>> adj_list[100000 + 100];
+ll dis[100000 + 100];
+vector<pair<ll,ll>> adj_list[100000 + 100];
 
 void dijkstra(int src) {
-    priority_queue<pair<int,long long>, vector<pair<int, long long>>, cmp> pq;
-    pq.push({src, 0}); 
+    priority_queue<pair<ll,ll>, vector<pair<ll,ll>>, cmp> pq;
+    pq.push({src, 0});
     dis[src] = 0;
 
     while(!pq.empty()) {
-        int par_nd = pq.top().first;
-        long long par_dis = pq.top().second;
+        ll par_nd = pq.top().first,
+            par_dis = pq.top().second;
         pq.pop();
 
         if(par_dis > dis[par_nd])
             continue;
 
-        for(pair<int,long long> child : adj_list[par_nd]) {
-            int child_nd = child.first;
-            long long child_dis = child.second;
+        for(pair<ll,ll> child : adj_list[par_nd]) {
+            ll child_nd = child.first,
+                child_dis = child.second;
 
             if(par_dis + child_dis < dis[child_nd]) {
                 dis[child_nd] = par_dis + child_dis;
@@ -80,16 +81,16 @@ void dijkstra(int src) {
 }
 
 int main() {
-    int nodes, edges; cin >> nodes >> edges;
+    ll nodes, edges; cin >> nodes >> edges;
 
+    // Setting the default values
     for(int i = 1; i <= nodes; i++) {
-        parrent[i] = -1;
         dis[i] = LLONG_MAX;
+        parrent[i] = -1;
     }
 
     while(edges--) {
-        int a, b; long long c;
-        cin >> a >> b >> c;
+        ll a, b, c; cin >> a >> b >> c;
         adj_list[a].push_back({b,c});
         adj_list[b].push_back({a,c});
     }
@@ -98,16 +99,16 @@ int main() {
     if(dis[nodes] == LLONG_MAX)
         cout << -1 << endl;
     else {
-        int node = nodes;
-        vector<int> ans;
+        vector<ll> ans;
+        ll node = nodes;
         while(node != -1) {
             ans.push_back(node);
             node = parrent[node];
         }
-        reverse(ans.begin(), ans.end());
 
-        for(int val : ans)
-            cout << val << " ";
+        reverse(ans.begin(), ans.end());
+        for(ll x : ans)
+            cout << x << " ";
         cout << endl;
     }
 
