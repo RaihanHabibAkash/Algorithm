@@ -11,7 +11,7 @@ ll fibo(int n) { // O(N)
     if(dp[n] != -1)
         return dp[n];
 
-    return dp[n] = fibo(n-1) + fibo(n-2);
+    return dp[n] = fibo(n-1) + fibo(n-2); // memoization
 }
 
 int main() {
