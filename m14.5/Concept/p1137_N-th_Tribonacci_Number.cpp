@@ -2,7 +2,7 @@
 // Platform: LeetCode
 // Difficulty: Easy
 // Link: https://leetcode.com/problems/n-th-tribonacci-number/
-// Topics: DP(top-down), Fibonacci series
+// Topics: DP-Tabulation(bottom-up), Fibonacci series
 /*
 The Tribonacci sequence Tn is defined as follows: 
 
