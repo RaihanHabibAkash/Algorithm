@@ -1,0 +1,1 @@
+{"name":"Local: W_Reach_Value","url":"f:\\Codes\\ForPithorons\\Algorithm\\m14.5\\W_Reach_Value.cpp","tests":[{"id":1788931052983,"input":"5\n1\n2\n10\n25\n200\n","output":"YES\nNO\nYES\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m14.5\\W_Reach_Value.cpp","group":"local","local":true}
