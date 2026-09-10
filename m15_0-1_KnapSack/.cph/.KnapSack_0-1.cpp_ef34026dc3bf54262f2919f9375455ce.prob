@@ -1,0 +1,1 @@
+{"name":"Local: KnapSack_0-1","url":"f:\\Codes\\ForPithorons\\Algorithm\\m15_0-1_KnapSack\\KnapSack_0-1.cpp","tests":[{"id":1788992923444,"input":"4\n10 4 7 5\n4 3 2 5\n8","output":"17"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m15_0-1_KnapSack\\KnapSack_0-1.cpp","group":"local","local":true}
