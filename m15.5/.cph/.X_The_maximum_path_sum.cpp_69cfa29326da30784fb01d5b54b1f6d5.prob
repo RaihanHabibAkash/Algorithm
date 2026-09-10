@@ -1,0 +1,1 @@
+{"name":"Local: X_The_maximum_path_sum","url":"f:\\Codes\\ForPithorons\\Algorithm\\m15.5\\X_The_maximum_path_sum.cpp","tests":[{"id":1789006935094,"input":"3 3\n5 2 4\n1 3 5\n9 2 7\n","output":"24"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m15.5\\X_The_maximum_path_sum.cpp","group":"local","local":true}
