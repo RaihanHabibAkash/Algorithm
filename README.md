@@ -27,4 +27,8 @@
 
 13. Problem Solving (CSES, Codeforces, Outsbook)
 
-14. Dynamic Programming (Top-Down, Bottom-Up)
+14. Dynamic Programming (Memoization, Tabulation)
+
+15. 0-1 KnapSack
+
+16. Hacker Rank Problems
