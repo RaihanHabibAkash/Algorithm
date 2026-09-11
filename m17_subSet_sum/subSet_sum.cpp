@@ -4,7 +4,7 @@ using namespace std;
 int val[1005];
 
 bool subSet_sum(int i, int sum) { // O(2^N)
-    if(i < 0) {
+    if(i < 0) { // Base case from phitron
         if(sum == 0)
             return true;
         else
