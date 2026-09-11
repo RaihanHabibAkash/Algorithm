@@ -4,7 +4,7 @@ using namespace std;
 int val[1005];
 int dp[1005][1005];
 
-bool subSet_sum(int i, int sum) {
+bool subSet_sum(int i, int sum) { // O(N*Sum)
     if(sum == 0) // Base case added by me
         return true;
     else if(i < 0)
