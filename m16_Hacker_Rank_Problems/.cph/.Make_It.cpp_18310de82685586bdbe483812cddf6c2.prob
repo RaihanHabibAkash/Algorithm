@@ -1,0 +1,1 @@
+{"name":"Local: Make_It","url":"f:\\Codes\\ForPithorons\\Algorithm\\m16_Hacker_Rank_Problems\\Make_It.cpp","tests":[{"id":1789159039993,"input":"5\n1\n3\n5\n15\n16\n","output":"YES\nNO\nYES\nNO\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m16_Hacker_Rank_Problems\\Make_It.cpp","group":"local","local":true}
