@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int dp[100000 + 5];
+bool dp[100000 + 5];
 
 void can_reach(int i) {
     if(i > 100000)
         return;
-    if(dp[i] != -1)
+    if(dp[i])
         return;
       
     dp[i] = true;
@@ -15,13 +15,13 @@ void can_reach(int i) {
 }
 
 int main() {
-    memset(dp, -1, sizeof(dp));
+    memset(dp, false, sizeof(dp));
     can_reach(1);
 
     int cs; cin >> cs;
     while(cs--) {
         int n; cin >> n;
-        if(dp[n] == 1)
+        if(dp[n])
             cout << "YES" << endl;
         else
             cout << "NO" << endl;
