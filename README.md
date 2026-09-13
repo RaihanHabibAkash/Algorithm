@@ -32,3 +32,5 @@
 15. 0-1 KnapSack
 
 16. Hacker Rank Problems
+
+17. SubSet Sum, Equal Partition Sum, Unbounded KnapSack
