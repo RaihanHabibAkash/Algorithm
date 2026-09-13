@@ -1,0 +1,1 @@
+{"name":"Local: merge_sort","url":"f:\\Codes\\ForPithorons\\Algorithm\\m18_mergeSort_Divide&Conquer\\merge_sort.cpp","tests":[{"id":1789273279652,"input":"5\n30 9 1 7 4","output":"1 4 7 9 30 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m18_mergeSort_Divide&Conquer\\merge_sort.cpp","group":"local","local":true}
