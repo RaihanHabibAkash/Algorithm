@@ -21,7 +21,7 @@
 
 10. Floyd Warshall
 
-11. Disjoint Set Union (DSU)
+11. Disjoint Set Union (DSU), Cycle detection in UnDirected Graph(DSU)
 
 12. Hacker Rank Problems
 
