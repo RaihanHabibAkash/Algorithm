@@ -1,0 +1,1 @@
+{"name":"Local: lcs","url":"f:\\Codes\\ForPithorons\\Algorithm\\m19_LCS_&_MST\\lcs.cpp","tests":[{"id":1789277393076,"input":"ABCD\nAKBD","output":"3"},{"id":1789277509702,"input":"BED\nBKE","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m19_LCS_&_MST\\lcs.cpp","group":"local","local":true}

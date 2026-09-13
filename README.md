@@ -36,3 +36,5 @@
 17. SubSet Sum, Equal Partition Sum, Unbounded KnapSack
 
 18. Merge Sort (Divide & Conquer)
+
+19. Longest Common SubSequence(LCS) & 
