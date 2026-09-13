@@ -37,4 +37,4 @@
 
 18. Merge Sort (Divide & Conquer)
 
-19. Longest Common SubSequence(LCS) & Minimum Spanning Tree(MST)
+19. Longest Common SubSequence(LCS) & (MST)Minimum Spanning Tree(Kruskals Algorithm)

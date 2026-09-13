@@ -1,0 +1,1 @@
+{"name":"Local: mst","url":"f:\\Codes\\ForPithorons\\Algorithm\\m19_LCS_&_MST\\mst.cpp","tests":[{"id":1789281629321,"input":"5 7\n0 1 2\n2 4 4\n0 3 3\n1 4 5\n0 2 3\n1 2 7\n4 3 6","output":"12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Codes\\ForPithorons\\Algorithm\\m19_LCS_&_MST\\mst.cpp","group":"local","local":true}
