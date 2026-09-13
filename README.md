@@ -34,3 +34,5 @@
 16. Hacker Rank Problems
 
 17. SubSet Sum, Equal Partition Sum, Unbounded KnapSack
+
+18. Merge Sort (Divide & Conquer)
